@@ -1,0 +1,385 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial
+scale=1.0"> 
+<title>Resume</title> 
+<link 
+href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' 
+rel='stylesheet'> 
+<style> 
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        } 
+        body { 
+            background: #091a2e; 
+            color: white; 
+        } 
+        .header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            padding: 20px 10%; 
+            background: transparent; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            z-index: 100; 
+        } 
+        .logo { 
+            font-size: 40px; 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 600; 
+        } 
+        .navbar a { 
+            font-size: 30px; 
+            color: white; 
+            text-decoration: none; 
+            font-weight: 500; 
+            margin-left: 50px; 
+            transition: color 0.3s ease; 
+        } 
+        .navbar a.active, 
+        .navbar a:hover { 
+            background-color: red; 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+        } 
+        .home { 
+            width: 100%; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 70px 10% 0; 
+        } 
+        .home-content { 
+            max-width: 800px; 
+        } 
+        .home-content h1 { 
+            font-size: 50px; 
+            font-weight: 700; 
+        } 
+        .home-content h2 { 
+            font-size: 30px; 
+            font-weight: 700; 
+        } 
+        .home-content:hover { 
+            transition-duration: 0.5s; 
+            transform: scale3d(1.15, 1.15, 1.15); 
+            text-shadow: 2px 2px 7px white; 
+        } 
+        .button { 
+            width: 180px; 
+            height: 50px; 
+            background: #b80d0d; 
+            font-size: 20px; 
+            text-decoration: none; 
+            color: white; 
+            font-weight: 600; 
+            justify-content: center; 
+            align-items: center; 
+            display: inline-flex; 
+            border-radius: 40px; 
+        } 
+        .button:hover { 
+            background-color: #de450d; 
+            transform: scale(1.2); 
+        } 
+        .home-sci a { 
+            display: flex; 
+            width: 40px; 
+            height: 40px; 
+            background: red; 
+            border-radius: 50%; 
+            font-size: 20px; 
+            text-decoration: none; 
+            color: white; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 20px; 
+        } 
+        .home-img { 
+            width: 410px; 
+            height: 410px; 
+        } 
+        .home-img .box { 
+            position: relative; 
+            width: 100%; 
+            height: 100%; 
+            background: #091a2e; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        } 
+        #image img { 
+            animation-name: movement; 
+            animation-duration: 3s; 
+            animation-timing-function: ease-in-out; 
+            animation-iteration-count: infinite; 
+        } 
+ 
+        @keyframes movement { 
+            50% { 
+                transform: translate(30px, 30px) rotate(2deg); 
+            } 
+        } 
+ 
+        .About { 
+            padding: 50px; 
+            font-size: 15px; 
+            transition: width 2s, height 2s, transform 2s; 
+        } 
+ 
+        .About:hover { 
+            transform: rotate(360deg); 
+        } 
+        #zhoka { 
+            color: white; 
+            text-shadow: 2px 2px 20px green; 
+        } 
+        .Skills { 
+            padding: 50px; 
+            font-size: 20px; 
+        } 
+        .lists { 
+            text-shadow: 2px 2px 20px green; 
+        } 
+ 
+        #Projects { 
+            padding: 50px 20px; 
+            background-color: #091a2e; 
+            text-align: center; 
+        } 
+        #Projects h1 { 
+            font-size: 30px; 
+            margin-bottom: 30px; 
+            color: red; 
+        } 
+        .projects { 
+            display: flex; 
+            justify-content: space-around; 
+        } 
+        .project-card { 
+            background-color: white; 
+            color: red; 
+            border: 3px solid black; 
+            width: 300px; 
+            padding: 20px; 
+            text-align: center; 
+            transition: transform 0.3s ease-in-out; 
+            border-radius: 8px; 
+        } 
+        .project-card:hover { 
+            transform: translateY(-10px); 
+        } 
+        .project-card img { 
+            width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+        } 
+        .project-card h3 { 
+            margin-top: 15px; 
+            font-size: 20px; 
+        } 
+        .project-card p { 
+            font-size: 17px; 
+            margin-top: 10px; 
+        } 
+        .Contact { 
+            padding: 50px; 
+            font-size: 20px; 
+        } 
+        .h-sci a { 
+            display: inline-block; 
+            width: 40px; 
+            height: 40px; 
+            background: red; 
+            border-radius: 50%; 
+            font-size: 40px; 
+            text-decoration: none; 
+            color: white; 
+            justify-content: center; 
+            align-items: center; 
+            margin: 20px; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <header class="header"> 
+        <a href="#" class="logo">Resume</a> 
+        <nav class="navbar"> 
+            <a href="#About" id="about-link" class="active">About 
+Me</a> 
+            <a href="#Skills" id="skills-link">Skills</a> 
+            <a href="#Projects" id="projects-link">Projects</a> 
+            <a href="#Contact" id="contact-link">Contact</a> 
+        </nav> 
+    </header> 
+ 
+    <section class="home"> 
+        <div class="home-sci"> 
+            <a href="#"><i class='bx bxl-facebook'></i></a> 
+            <a href="#"><i class='bx bxl-twitter'></i></a> 
+            <a href="#"><i class='bx bxl-linkedin'></i></a> 
+        </div> 
+        <div class="home-content"> 
+            <h1>Hi, I'm Atharva Gaikwad</h1> 
+            <h2>Web Designer and Developer</h2> 
+            <p style="font-size: 24px;">Welcome to my 
+Resume.</p><br><br> 
+            <a href="#" class="button">Hire Me</a> 
+        </div> 
+        <div class="home-img"> 
+            <div class="box"> 
+                <div id="image"> 
+                    <img src="https://wallpapercave.com/wp/wp2126345.jpg" 
+height="400px" width="320px" alt="Atharva Gaikwad"> 
+                </div> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <div class="About"> 
+        <section id="About"> 
+            <h1 style="color:red;">About Me:</h1> 
+            <p id="zhoka">Hello! My name is Atharva Gaikwad and I’m 
+currently a second-year student at Shah and Anchor Kutchhi Engineering 
+College, pursuing a degree in Computer Science. I’ve always been 
+passionate about technology, problem-solving, and innovation, 
+which is why I chose engineering as my field of study. I've passed 
+10th from New Horizon Public School, Airoli and 12th from Mulund 
+Vidya Mandir Junior College. Apart from academics, I enjoy 
+participating in extracurricular activities like chess, coding, robotics, 
+music, etc.  I have gained foundational skills in programming 
+languages, software tools, CAD design and I am passionate about 
+continuing to learn and develop in a professional environment. I am 
+a quick learner, a team player, and always excited to take on new 
+challenges. I am looking forward to the opportunity to contribute to 
+the company and grow my skills while making meaningful 
+contributions to the team.</p> 
+        </section> 
+    </div> 
+ 
+    <div class="Skills"> 
+        <section id="Skills"> 
+            <h1 style="color:red;">My Technical Skills:</h1> 
+            <div class="lists"> 
+                <p>As a Computer Science student, I have gained 
+experience in a variety of programming languages, frameworks, and 
+tools. Here is an overview of the skills I have developed:</p> 
+        <h2>Programming Languages</h2> 
+        <ul> 
+          <li>Python</li> 
+          <li>JavaScript</li> 
+          <li>C++</li> 
+          <li>SQL</li> 
+        </ul> 
+        <h2>Web Development</h2> 
+        <ul> 
+          <li>HTML5</li> 
+          <li>CSS3</li> 
+          <li>JavaScript (React, Angular)</li> 
+        </ul> 
+        <h2>Databases</h2> 
+        <ul> 
+          <li>MySQL</li> 
+          <li>SQLite</li> 
+        </ul> 
+        <h2>Tools & Technologies</h2> 
+        <ul> 
+          <li>Git & GitHub</li> 
+          <li>Visual Studio Code</li> 
+        </ul> 
+        <h2>Operating Systems</h2> 
+        <ul> 
+          <li>Linux</li> 
+          <li>Windows</li> 
+          <li>macOS</li> 
+        </ul>   
+        <h2>Soft Skills</h2> 
+        <ul> 
+          <li>Problem Solving</li> 
+          <li>Team Collaboration</li> 
+          <li>Time Management</li> 
+          <li>Critical Thinking</li> 
+          <li>Communication</li> 
+        </ul> 
+            </div> 
+        </section> 
+    </div> 
+ 
+    <div class="Projects"> 
+        <section id="Projects"> 
+            <h1>My Projects:</h1><br><br> 
+            <div class="projects"> 
+                <div class="project-card"> 
+                    <img 
+src="https://tse1.mm.bing.net/th/id/OIP.HtGbjyN50yMSZJ9SRgyC_QHaE5?pid=Api&P=0&h=180" 
+alt="Restaurant Website"> 
+                    <h3>Restaurant Website</h3> 
+                </div> 
+                <div class="project-card"> 
+                    <img src="https://iphonesoft.fr/images/2025/04/flappy-bird-epic-games.jpg" alt="Flappy Bird 
+Game"> 
+                    <h3>Flappy Bird Game</h3> 
+                </div> 
+                <div class="project-card"> 
+                    <img src="https://img.freepik.com/premium-vector/mobile-weather-app-interface-design-gui-elements-weather-forecast-mobile-app-realistic-phone-temperature-weather-condition-user-interface-generator-ui-ux-toolkit-vector-illustration_397674-1044.jpg?w=2000" alt="Weather App"> 
+                    <h3>Weather App</h3> 
+                </div> 
+            </div> 
+        </section> 
+    </div> 
+ 
+    <div class="Contact"> 
+        <section id="Contact"> 
+            <h1 style="color:red;">Contact:</h1> 
+            <div class="h-sci"> 
+                <a href="#"><i class='bx bxl-facebook'></i></a> 
+                <a href="#"><i class='bx bxl-twitter'></i></a> 
+                <a href="#"><i class='bx bxl-linkedin'></i></a> 
+            </div> 
+        </section> 
+    </div> 
+    <script> 
+     
+        const navbarLinks = document.querySelectorAll('.navbar a'); 
+        navbarLinks.forEach(link => { 
+            link.addEventListener('mouseover', function() { 
+                link.style.color = 'green';  
+            }); 
+            link.addEventListener('mouseout', function() { 
+                link.style.color = 'blue';  
+            }); 
+        }); 
+ 
+        const projectsLink = document.getElementById('projects-link'); 
+ 
+        projectsLink.addEventListener('click', function(event) { 
+            event.preventDefault();  
+            alert('You clicked the Projects link!'); 
+        }); 
+ 
+        navbarLinks.forEach(link => { 
+            link.addEventListener('keydown', function(event) { 
+                if (event.key === "Enter") { 
+                    alert(`You pressed Enter on ${link.textContent}!`); 
+                } 
+            }); 
+        }); 
+        const aboutLink = document.getElementById('about-link');  
+ 
+        aboutLink.addEventListener('keydown', function(event) { 
+            if (event.key === "Enter") { 
+                alert('You pressed Enter on About Me!'); 
+            } 
+        }); 
+    </script> 
+</body> 
+</html> 
